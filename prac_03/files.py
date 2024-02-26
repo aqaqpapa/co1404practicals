@@ -24,6 +24,8 @@ print(total)
 
 with open("numbers.txt", "r") as file:
     line_count2 = 0
+    line=file.readline()
     while line:
         line_count2+=1
+        line=file.readline()
 print(line_count2)
