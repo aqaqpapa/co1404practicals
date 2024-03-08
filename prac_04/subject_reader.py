@@ -4,6 +4,14 @@ FILENAME = "subject_data.txt"
 def main():
     data = get_data()
     print(data)
+    print_content()
+def print_content():
+    input_file=open(FILENAME, "r")
+    for line in input_file:
+        line=line.strip()
+        parts= line.split(",")
+        parts[2]=int(parts[2])
+        print(f"{parts[0]} is taught by {parts[1]} and has  {parts[2]} students")
 
 
 def get_data():
