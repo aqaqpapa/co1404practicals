@@ -10,11 +10,15 @@ CODE_TO_NAME = {
 
 
 print(CODE_TO_NAME)
+output=[]
+state_code = input("Enter short state: ").upper()
 
-state_code = input("Enter short state: ")
 while state_code != "":
-    if state_code in CODE_TO_NAME:
+    try:
         print(state_code, "is", CODE_TO_NAME[state_code])
-    else:
+        output.append(state_code)
+    except KeyError:
         print("Invalid short state")
-    state_code = input("Enter short state: ")
+    state_code = input("Enter short state: ").upper()
+for code in output:
+    print(f"{code:4} is   {CODE_TO_NAME[code]}")
