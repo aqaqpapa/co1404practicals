@@ -10,3 +10,7 @@ while emails!="":
         emails = input("Emails: ")
     else:
         full_name=input("Name")
+        Name_to_Email[full_name] = emails
+        emails = input("Emails: ")
+for Name,Email in Name_to_Email.items():
+    print(f"{Name} ({Email})")
