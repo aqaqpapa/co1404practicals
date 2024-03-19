@@ -13,12 +13,8 @@ from programming_language import ProgrammingLanguage
 def main():
     """Read file of programming language details, save as objects, display."""
     languages = []
-    # Open the file for reading
     in_file = open('languages.csv', 'r')
-    # File format is like: Language,Typing,Reflection,Year
-    # 'Consume' the first line (header) - we don't need its contents
     in_file.readline()
-    # All other lines are language data
     for line in in_file:
         # print(repr(line))  # debugging
         # Strip newline from end and split it into parts (CSV)
