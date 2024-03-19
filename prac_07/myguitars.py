@@ -19,7 +19,6 @@ def main():
     print("Guitars:")
     print_guitars(guitars)
 
-    # 保存到文件
     save_guitars(guitars)
 
 def load_guitars():
