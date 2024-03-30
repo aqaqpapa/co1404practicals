@@ -20,6 +20,18 @@ BoxLayout:
 #        text: 'Convert m to km'
 #        on_press: app.handle_calculate()
     Label:
+        text:'Convert miles to km'
+        font_size:40
+        halign: 'center'
+        valign: 'middle'
+        color: 1, 1, 1, 1
+        canvas.before:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1  # 设置背景颜色为灰色
+            Rectangle:
+                size: self.size
+                pos: self.pos
+    Label:
         id: output_label
         font_size: 48
         text: '54.717'
