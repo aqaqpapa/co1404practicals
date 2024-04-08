@@ -8,7 +8,7 @@ class UnreliableCar(Car):
     def __str__(self):
         return f"{super().__str__()}"
     def drive(self, distance):
-        random_realiability = random.random*100
+        random_realiability = random.random()*100
         if random_realiability < self.realiability:
             distance_drive = super().drive(distance)
         else:
